@@ -24,7 +24,7 @@ python -m pipx ensurepath
 
 2. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/enhanced-file-merger.git
+git clone https://github.com/coni524/enhanced-file-merger.git
 cd enhanced-file-merger
 ```
 
