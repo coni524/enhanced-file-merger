@@ -1,0 +1,41 @@
+# These patterns ignore Python caches, OS artifacts, and environment files.
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment
+.env
+.venv/
+
+# Other
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+log/
+
+# Build
+dist/
+build/
+out/
+
+# Coverage
+coverage/
+.coverage
+htmlcov/

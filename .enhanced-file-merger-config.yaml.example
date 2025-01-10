@@ -1,0 +1,59 @@
+# Typically placed in the project root as .enhanced-file-merger-config.yaml or specify with --config
+# .enhanced-file-merger-config.yaml
+output_format:
+  add_line_numbers: true
+  show_file_count: true
+  show_summary: true
+  separator_line: '=' 
+  separator_length: 80 
+
+exclude_patterns:
+  directories:
+    - node_modules
+    - __pycache__
+    - .pytest_cache
+    - .git
+    - .env
+    - cdk.out
+    - .aws-sam
+    - .next
+
+  files:
+    - '*.json'
+    - '*.lock'
+    - '*.md'
+    - '*.pyc'
+    - '*.pyo'
+    - '*.exe'
+    - '*.dll'
+    - '*.so'
+    - '*.dylib'
+    - '*.bin'
+    - '*.jar'
+    - '*.war'
+    - '*.zip'
+    - '*.tar.gz'
+    - '*.rar'
+    - '*.7z'
+    - '*.coverage'
+
+  system_files:
+    - .DS_Store
+    - Thumbs.db
+    - desktop.ini
+    - .gitignore
+    - .env
+
+encoding:
+  default: utf-8
+  fallback:
+    - cp932
+    - shift-jis
+    - euc-jp
+    # for Japanese enviroment follback
+
+output:
+  add_timestamp: true
+  timestamp_format: '%Y-%m-%d %H:%M:%S'
+  line_ending: auto # "auto", "lf", "crlf"
+  max_total_size_kb: 200 # Total file size limit (KB)
