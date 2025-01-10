@@ -129,7 +129,22 @@ output:
   add_timestamp: true       # Add timestamp
   timestamp_format: "%Y-%m-%d %H:%M:%S"
   line_ending: "auto"       # Line ending (auto/lf/crlf)
+  max_total_size_kb: 200    # Total file size limit (default: 200KB)
 ```
+
+### File Size Limits
+
+By default, the total size of merged files is limited to 200KB to prevent accidental creation of extremely large files. You can adjust this limit in the configuration file:
+
+```yaml
+output:
+  max_total_size_kb: 500  # Change to 500KB
+```
+
+If you need to process larger files, consider:
+1. Increasing the `max_total_size_kb` value in your config file
+2. Splitting your source files into smaller chunks
+3. Using the `--exclude` option to skip large files
 
 ## Output Example
 
@@ -167,7 +182,6 @@ poetry run pytest
 ```
 
 ## Notes
-
 1. **Large Files**: Be mindful of memory usage
 2. **Encoding**: Automatic detection is not perfect
 3. **Exclusion Patterns**: Ensure no unintended files are included
